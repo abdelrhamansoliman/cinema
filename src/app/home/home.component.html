@@ -1,0 +1,26 @@
+<div class="container text-light">
+<div class="navPagination py-2 my-5 w-25 m-auto rounded">
+  <ul class="list-unstyled d-flex justify-content-around">
+    <li *ngFor="let page of pages" (click)='changePageNumper (page)'>{{page}}</li>
+  </ul>
+
+</div>
+    <div class="row">
+
+        <div *ngFor="let mov of movContainer; let i=index" class="col-md-4">
+            <div class="mov-card my-4">
+                <a [routerLink] ="['/detils',i]">
+                
+                  <img  [src]="imgPrefix+mov.backdrop_path"/>
+                    
+                    <div class="detels py-3">
+                  <h5 class="py-1">{{mov.title}}</h5>
+                  <p class="py-3">{{mov.overview}}</p>
+                  </div>
+                </a>
+
+          </div>
+        
+        </div>
+        </div>
+    </div>

@@ -1,0 +1,31 @@
+.navPagination{
+    background-color:#13151f  !important;
+    box-shadow: 0px 0px 20px black ;
+}
+.navPagination li{
+    cursor: pointer;
+}
+.mov-card{
+    position: relative;
+    overflow: hidden;
+}
+.mov-card:hover .detels
+{
+top: 0;
+}
+img{
+    transition: transform 1s;
+}
+.mov-card:hover img{
+    transform: scale(1.2,1.2);
+}
+
+.detels{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+    background-color: rgba(0,0, 0,0.8);
+    transition: 1s;
+}

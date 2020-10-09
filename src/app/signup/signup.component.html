@@ -1,0 +1,55 @@
+<div class="container text-light">
+    <form [formGroup]='signUpForm'>
+  <div class="form-group">
+    <label for="">Frist name</label>
+    <input type="text" formControlName ='fristName' class="form-control">
+    <div *ngIf="signUpForm.controls.fristName.touched && signUpForm.controls.fristName.errors!=null" class="alert alert-danger" >
+        Frist name minLeanth is 4
+        </div>
+  </div>
+
+  <div class="form-group">
+    <label for="">Last name</label>
+    <input type="text" formControlName ='lastName' class="form-control">
+    <div *ngIf="signUpForm.controls.lastName.touched && signUpForm.controls.lastName.errors!=null" class="alert alert-danger" >
+        Frist name isn't valid
+        </div>
+  </div>
+
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="email" formControlName ='email' class="form-control">
+    <div *ngIf="signUpForm.controls.email.touched && signUpForm.controls.email.errors!=null" class="alert alert-danger" >
+       email isn't valid
+        </div>
+  </div>
+
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" formControlName ='password' class="form-control">
+    <div *ngIf="signUpForm.controls.password.touched && signUpForm.controls.password.errors!=null" class="alert alert-danger" >
+        Password minLeanth is 8
+        </div>
+  </div>
+  <div class="form-group">
+    <label for="">Re password</label>
+    <input type="rePassword" formControlName ='password' class="form-control">
+    <div *ngIf="signUpForm.controls.rePassword.touched && signUpForm.controls.rePassword.errors!=null" class="alert alert-danger" >
+        Password isn't valide
+        </div>
+  </div>
+  <h6>Gender</h6>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" formControlName ='gender' name="inlineRadioOptions" id="inlineRadio1" value="option1">
+    <label class="form-check-label" for="inlineRadio1">Male</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" formControlName ='gender' name="inlineRadioOptions" id="inlineRadio2" value="option2">
+    <label class="form-check-label" for="inlineRadio2">Female</label>
+  </div>
+<br>
+  <button [disabled]='signUpForm.invalid' type="submit" class="btn btn-info m-4"> Sign Up </button>
+
+    </form>
+
+</div>
